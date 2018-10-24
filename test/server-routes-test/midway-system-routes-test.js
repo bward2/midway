@@ -301,7 +301,7 @@ servers.forEach(function (server) {
             .end(function (err, res) {
               Expect(err).to.equal(null);
               Expect(res.status).to.equal(404);
-              Expect(res.text).to.equal('No route defined in for this path');
+              Expect(res.text).to.equal('No route defined for this path');
               done();
             });
       } catch (err) {
@@ -317,7 +317,7 @@ servers.forEach(function (server) {
           .end(function (err, res) {
             Expect(err).to.equal(null);
             Expect(res.status).to.equal(404);
-            Expect(res.text).to.equal('No route defined in for this path');
+            Expect(res.text).to.equal('No route defined for this path');
             Expect(res.header[Constants.MOCKED_RESPONSE]).to.equal('false');
             done();
           });
